@@ -1,0 +1,46 @@
+{
+    "name": "missing-piece-2023",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build"
+    },
+    "dependencies": {
+        "@renatodeleao/vue-sticky-directive": "^0.3.0",
+        "@srexi/purecounterjs": "^1.5.0",
+        "@vuelidate/core": "^2.0.3",
+        "@vuelidate/validators": "^2.0.4",
+        "aos": "^2.3.4",
+        "axios": "^1.6.2",
+        "babel-preset-es2015": "^6.24.1",
+        "core-js": "^3.8.2",
+        "headbreaker": "^3.0.0",
+        "install": "^0.13.0",
+        "konva": "^9.2.3",
+        "npm": "^10.2.5",
+        "scss": "^0.2.4",
+        "sidebar": "^1.0.2",
+        "videojs-youtube": "^3.0.1",
+        "vue-loader": "^17.0.1",
+        "vue-loading-skeleton": "^2.0.0-beta.1",
+        "vue-responsive-video-background-player": "^1.3.1",
+        "vue-slick-carousel": "^1.0.6",
+        "vue-social-sharing": "^3.0.9",
+        "vue-sticky-js": "0.0.4",
+        "vuetify": "^2.4.2"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^5.0.8",
+        "@vue/cli-service": "^5.0.8",
+        "@vue/compiler-sfc": "^3.3.10",
+        "sass": "~1.32.4",
+        "sass-loader": "^8.0.0",
+        "video.js": "^8.6.1",
+        "vue-cli-plugin-vuetify": "^2.0.9",
+        "vue-router": "^3.5.1",
+        "vue-template-compiler": "^2.5.16",
+        "vuetify-loader": "^1.3.0",
+        "vuex": "3.6.2"
+    }
+}

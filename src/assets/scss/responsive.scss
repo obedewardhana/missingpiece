@@ -1,0 +1,263 @@
+/*
+Responsive
+*/
+
+@media screen and (min-width: 1024px) and (max-width: 4000px) {
+  .v-application {
+    .puzzle-area {
+      display: block;
+      position: absolute;
+      width: 60%;
+      right: 0;
+      top: 0;
+      canvas {
+        top: -50px !important;
+      }
+    }
+    .puzzle-desc {
+      min-height: 70vh;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .v-application {
+    .text-h3,
+    .text-h4,
+    .text-h5 {
+      font-size: 25px !important;
+    }
+    .action-box {
+      justify-content: flex-start;
+    }
+    .v-card {
+      p {
+        font-size: 14px;
+        white-space: normal;
+      }
+      .feed-control.single {
+        // height: 180px;
+      }
+      .bg-infographic {
+        &:nth-child(2) {
+          background: transparent;
+          &:after {
+            display: none;
+          }
+        }
+        &:nth-child(3) {
+          background: transparent;
+          &:after {
+            display: none;
+          }
+        }
+        .info-item {
+          padding: 15px;
+          margin: 10px;
+          border-radius: 10px;
+          background: var(--v-gray-base);
+          img {
+            height: 70px;
+          }
+          .info-content {
+            p {
+              font-size: 35px;
+            }
+            h1 {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .feed-date {
+        h1 {
+          font-size: 16px;
+        }
+      }
+      .feed-filter {
+        .v-btn {
+          font-size: 20px;
+        }
+      }
+      .feed-item {
+        height: 300px;
+        .v-overlay__content {
+          .feed-content {
+            h2 {
+              font-size: 20px;
+            }
+            .feed-item-header {
+              margin-top: 30px;
+            }
+            .feed-category {
+              font-size: 12px;
+              padding: 2px 8px;
+              bottom: unset;
+              top: 20px;
+            }
+            .v-btn {
+              font-size: 12px;
+              padding: 0;
+              bottom: -15px;
+            }
+          }
+        }
+      }
+      .map-info {
+        .map-info-content {
+          li {
+            width: calc(50% - 20px);
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .feed-horizontal-item {
+        flex-direction: column;
+        flex-wrap: wrap;
+        .v-image {
+          width: 100%;
+        }
+        .feed-horizontal-content {
+          width: 100%;
+          .feed-category {
+            color: var(--v-white-base);
+            background-color: var(--v-primary-base);
+          }
+          .v-card__title {
+            width: 100%;
+          }
+        }
+      }
+      .faith-item {
+        p {
+          font-size: 14px;
+        }
+      }
+      .video-item {
+        .video-hover {
+          &:hover {
+            transform: scale(1.1) translateY(0);
+          }
+        }
+      }
+    }
+    section {
+      .news-main {
+        min-height: unset;
+        .feed-detail {
+          .feed-detail-date {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+  .v-dialog {
+    .v-list-item {
+      flex-direction: column;
+      min-height: unset;
+      .v-list-item__content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .v-application {
+    .v-card {
+      .feed-filter .v-btn__content {
+        transform: rotate(-90deg);
+      }
+      .puzzle-left {
+        left: -30px;
+      }
+      .puzzle-right {
+        right: -30px;
+      }
+      .loading-box.testimony-box {
+        .slick-list {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .v-application {
+    .v-parallax {
+      height: 450px !important;
+      margin-bottom: -80px !important;
+      .v-parallax__image {
+        top: 0;
+        bottom: unset;
+        transform: unset !important;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .v-card {
+      .faith-item {
+        h1 {
+          width: 20%;
+        }
+        p {
+          width: 80%;
+        }
+      }
+      .feed-date {
+        h1 {
+          font-size: 12px;
+        }
+      }
+      .feed-filter {
+        .v-btn {
+          font-size: 14px;
+          .v-icon {
+            display: none;
+          }
+        }
+      }
+      .feed-control {
+        .v-btn {
+          min-width: unset !important;
+          .v-icon {
+            font-size: 14px !important;
+          }
+        }
+      }
+      .map-info {
+        .map-info-content {
+          li {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .loading-box.testimony-box {
+        .slick-list {
+          width: 100%;
+        }
+      }
+    }
+    .puzzle-area {
+      .konvajs-content {
+        margin-bottom: -25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .v-application {
+    .puzzle-area {
+      .konvajs-content {
+        margin-bottom: -55px;
+      }
+    }
+  }
+}
