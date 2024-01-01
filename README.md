@@ -1,4 +1,4 @@
-# KIBAID Website
+# MISSING PIECE Company Profile
 
 ## 🚀 Project setup
 
