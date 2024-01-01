@@ -295,7 +295,7 @@
           <v-card
             :elevation="0"
             color="transparent"
-            class="py-0 px-3 card-about"
+            class="py-0 px-3"
             tile
           >
             <v-row>

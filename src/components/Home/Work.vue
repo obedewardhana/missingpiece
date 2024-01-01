@@ -5,7 +5,12 @@
       <hr />
       <v-row>
         <v-col cols="12">
-          <v-card :elevation="0" color="transparent" style="padding-top:40px" tile>
+          <v-card
+            :elevation="0"
+            color="transparent"
+            style="padding-top: 40px"
+            tile
+          >
             <v-row>
               <v-col cols="12" class="">
                 <v-card-title
@@ -112,7 +117,7 @@
                         :id="'hover-' + idx"
                         :data-src="
                           feed.linkyoutube +
-                          '?origin=https://missingpiece-agency.com&rel=0&vq=hd1080'
+                          '?origin=https://missingpiece-agency.com&rel=0&autohide=2&vq=hd1080&modestbranding=0&showinfo=0'
                         "
                         :data-poster="
                           'https://administrator.missingpiece-agency.com/img/' +
@@ -127,7 +132,7 @@
                             :id="'video-' + idx"
                             :src="
                               feed.linkyoutube +
-                              '?origin=https://missingpiece-agency.com&rel=0&vq=hd1080&controls=0'
+                              '?origin=https://missingpiece-agency.com&rel=0&autohide=2&vq=hd1080&modestbranding=0&showinfo=0&controls=0'
                             "
                             :poster="
                               'https://administrator.missingpiece-agency.com/img/' +
@@ -141,7 +146,7 @@
                             <source
                               :src="
                                 feed.linkyoutube +
-                                '?origin=https://missingpiece-agency.com&rel=0&vq=hd1080'
+                                '?origin=https://missingpiece-agency.com&rel=0&autohide=2&vq=hd1080&modestbranding=0&showinfo=0'
                               "
                               :poster="
                                 'https://administrator.missingpiece-agency.com/img/' +
@@ -151,7 +156,7 @@
                             />
                           </video>
                           <div class="work-description">
-                            <v-btn small color="white" rounded="xl" class="btn-play">
+                            <v-btn small color="white" class="btn-play rounded-2">
                               <v-icon>mdi-play</v-icon>
                             </v-btn>
                             <div class="text-p ml-2">{{ feed.judul }}</div>
@@ -327,14 +332,32 @@ export default {
         if (video.dataset.id == Index) {
           if (this.player == null) {
             if (!installed) {
+              // var iframeContent = iframeDocument.queryselector('iframe');
               this.player = videojs("#video-" + video.dataset.id, {
                 autoplay: true,
                 muted: true,
                 enableDocumentPictureInPicture: true,
-                aspectRatio:"16:9"
+                aspectRatio: "16:9",
               });
 
               this.player.addClass("vjs-waiting");
+
+              this.player.on("playing", function () {
+                // const iframes = document.getElementById(
+                //   "#video-" + video.dataset.id + "_youtube_api"
+                // );
+                console.log(video.dataset.id);
+                const iframe = document.getElementById(
+                  "video-" + video.dataset.id + "_youtube_api"
+                );
+                // iframe.classList.add('coba');
+                // const iframewindow =
+                //   iframe.contentWindow || iframe.contentDocument.defaultView;
+                // const doc = iframewindow.document;
+                // const csstag = doc.createElement("style");
+                // const head = doc.getElementsByTagName("head")[0];
+                // head.appendChild.csstag;
+              });
             }
           }
         }

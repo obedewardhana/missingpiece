@@ -1,11 +1,11 @@
-# MISSING PIECE
+# KIBAID Website
 
 ## 🚀 Project setup
 
 Use [git](https://git-scm.com/) to clone the project.
 
 ```bash
-git clone https://github.com/obedewardhana/missingpiece.git
+git clone https://github.com/obedewardhana/KIBAID-2022.git
 ```
 Enter the project.
 ```bash

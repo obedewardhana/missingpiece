@@ -46,6 +46,7 @@
     &.btn-play {
       min-width: 28px !important;
       padding: 0 !important;
+      border-radius: 28px!important;;
     }
     .v-btn:before {
       opacity: 0 !important;
@@ -376,7 +377,9 @@
         }
         .vjs-tech {
           width: 100% !important;
-          height: 100%;
+          // height: 100%;
+          height: calc(100% * 2)!important;
+          top: calc(-25% * 2)!important;
           .vjs-big-play-button {
             display: none;
           }
@@ -485,6 +488,8 @@
           z-index: 50;
           transform: scale(1.2) translateY(0);
         }
+        &.hovered-active {
+        }
         .v-overlay--active {
           pointer-events: none;
         }
@@ -508,7 +513,9 @@
           }
           .vjs-tech {
             width: 100% !important;
-            height: 100%;
+            // height: 100%;
+            height: calc(100% * 2)!important;
+            top: calc(-25% * 2)!important;
             object-fit: cover;
             .vjs-default-skin {
               .vjs-big-play-button {
@@ -517,9 +524,7 @@
             }
             .html5-video-player {
               .ytp-chrome-top {
-                &.ytp-show-cards-title {
-                  display: none;
-                }
+                display: none;
               }
             }
           }
@@ -715,8 +720,8 @@
                 color: var(--v-white-base);
               }
               .text-profession {
-                width: 75%;
-                font-size: 14px;
+                width: 60%;
+                font-size: 12px;
                 font-family: "DM Sans", sans-serif;
                 word-wrap: break-word;
                 color: var(--v-white-base);
@@ -810,6 +815,7 @@
               align-items: center;
               padding: 15px;
               order: 2;
+              z-index:9;
             }
             .work-title {
               display: block;
@@ -828,8 +834,8 @@
                 color: var(--v-white-base);
               }
               .text-profession {
-                width: 75%;
-                font-size: 14px;
+                width: 60%;
+                font-size: 12px;
                 font-family: "DM Sans", sans-serif;
                 word-wrap: break-word;
                 color: var(--v-white-base);
