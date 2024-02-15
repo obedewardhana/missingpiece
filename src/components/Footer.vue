@@ -47,7 +47,7 @@
             </div>
             <div class="d-flex flex-row flex-wrap align-start pl-4 mb-3">
               <v-icon size="24px" class="white--text mr-2">mdi-email</v-icon>
-              <a  :href="'mailto:'+datacompany.email" class="white--text no-hover" style="text-decoration:none;width:80%;" target="_blank">{{ datacompany.email }}</a>
+              <a  :href="'mailto:'+datacompany.email" class="white--text no-hover text-pre" style="text-decoration:none;width:80%;" target="_blank">{{ datacompany.email }}</a>
             </div>
           </v-row>
           <v-row class="flex-row flex-wrap mx-0">
