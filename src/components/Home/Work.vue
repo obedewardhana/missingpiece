@@ -21,14 +21,17 @@
                 >
                   Our work
                 </v-card-title>
-                <div
-                  class="feed-control single"
-                  style="height: 220px !important"
-                >
-                  <!-- <v-btn @click="slidePrev" class="btn-control btn-feed-prev">
+                <div class="feed-control full" style="height: 220px !important">
+                  <!-- <v-btn
+                    @click="slidePrev"
+                    class="btn-control btn-feed-prev btn-work-prev"
+                  >
                     <v-icon size="24px">mdi-arrow-left</v-icon>
-                  </v-btn> -->
-                  <!-- <v-btn @click="slideNext" class="btn-control btn-feed-next btn-work-next">
+                  </v-btn>
+                  <v-btn
+                    @click="slideNext"
+                    class="btn-control btn-feed-next btn-work-next"
+                  >
                     <v-icon size="24px">mdi-arrow-right</v-icon>
                   </v-btn> -->
                 </div>
@@ -156,7 +159,11 @@
                             />
                           </video>
                           <div class="work-description">
-                            <v-btn small color="white" class="btn-play rounded-2">
+                            <v-btn
+                              small
+                              color="white"
+                              class="btn-play rounded-2"
+                            >
                               <v-icon>mdi-play</v-icon>
                             </v-btn>
                             <div class="text-p ml-2">{{ feed.judul }}</div>
@@ -201,7 +208,7 @@ export default {
   data: () => ({
     settings: {
       dots: false,
-      arrows: false,
+      arrows: true,
       infinite: false,
       speed: 700,
       slidesToShow: 3,
@@ -211,6 +218,8 @@ export default {
       initialSlide: 0,
       autoplay: false,
       margin: 10,
+      touchThreshold: 100,
+      draggable: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -304,17 +313,23 @@ export default {
 
       // console.log(new Intl.DateTimeFormat("id", options).format(datetime));
     },
-    onInit() {},
-    onUpdate() {},
-    onBeforeChange(page, newSlideIndex) {
-      const items = document.querySelectorAll(".slick-slide");
-
-      items.forEach(function (item) {
-        // item.classList.remove("slick-active");
-      });
+    onInit() {
+      document.querySelector(".btn-work-prev").classList.add("hidden");
     },
-    onAfterChange() {
+    onUpdate() {},
+    onBeforeChange(page, newSlideIndex) {},
+    onAfterChange(page) {
       const items = document.querySelectorAll(".slick-slide");
+      const slides = document.querySelectorAll(".video-item");
+
+      // if (page == slides.length-4) {
+      //   document.querySelector(".btn-work-next").classList.add("hidden");
+      // } else if (page < slides.length-4 && page > 0) {
+      //   document.querySelector(".btn-work-next").classList.remove("hidden");
+      //   document.querySelector(".btn-work-prev").classList.remove("hidden");
+      // } else if (page = 0) {
+      //   document.querySelector(".btn-work-prev").classList.add("hidden");
+      // }
 
       items.forEach(function (item) {
         // item.classList.add("slick-active");
